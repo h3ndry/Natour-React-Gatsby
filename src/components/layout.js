@@ -72,6 +72,7 @@ const GlobalStyle = createGlobalStyle`
       width: 100% !important;
     }
   }
+  
 
   .col-1-of-2 { width: calc((100% - var(--gutter-horizontal)) / 2); }
   .col-1-of-3 {
@@ -80,9 +81,7 @@ const GlobalStyle = createGlobalStyle`
   .col-2-of-3 {
     width: calc(2 * ((100% - 2 * var(--gutter-horizontal)) / 3) + var(--gutter-horizontal));
   }
-  .col-1-of-4 {
-    width: calc((100% - 3 * var(--gutter-horizontal)) / 4);
-  }
+  .col-1-of-4 { width: calc((100% - 3 * var(--gutter-horizontal)) / 4); }
   .col-2-of-4 {
     width: calc(2 * ((100% - 3 * var(--gutter-horizontal)) / 4) + var(--gutter-horizontal));
   }
