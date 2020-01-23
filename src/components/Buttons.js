@@ -1,17 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Buttons({ href, text }) {
+export function ButtonA({ href, text }) {
   return (
-    <ButtonWrapper href={href}>
+    <ButtonWrapperA href={href}>
       {text}
-    </ButtonWrapper>
+    </ButtonWrapperA>
+
+  )
+}
+
+export function ButtonB({ href, text }) {
+  return (
+    <ButtonWrapperB href={href}>
+      {text}
+    </ButtonWrapperB>
 
   )
 }
 
 
-const ButtonWrapper = styled.a`
+const ButtonWrapperA = styled.a`
 
 @keyframes moveInBottom {
   0% { opacity: 0; transform: translateY(3rem); }
@@ -56,4 +65,21 @@ animation: moveInBottom .5s ease-out .75s backwards;
   }
 
 }
+`
+
+const ButtonWrapperB = styled.a`
+  font-size: 1rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  transition: all .2s;
+
+  &:hover {
+    background-color: #55c57a;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+  }
 `

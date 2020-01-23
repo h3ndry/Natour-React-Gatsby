@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import BackgroundImage from '../images/hero-small.jpg'
 import Logo from '../images/logo-white.png'
-import Button from './Buttons'
+import { ButtonA } from './Buttons'
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
         <span className="sub">is where life happens</span>
       </h1>
 
-      <Button
+      <ButtonA
         href='#section-tours'
         text='Discover our tours'
       />
@@ -92,13 +92,13 @@ const HeaderWrapper = styled.header`
   
       .main {
         animation: moveInLeft 1s ease-out;
-        font-size: 3rem;
+        font-size: 3.75rem;
         line-height: 1.7;
         letter-spacing: 2.1875rem;
       } 
 
       .sub {
-        font-size: 1rem;
+        font-size: 1.25rem;
         letter-spacing: 1rem;
         animation: moveInRight 1s ease-out
       }
