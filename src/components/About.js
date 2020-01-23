@@ -63,7 +63,7 @@ export default function About() {
 
         <div className="col-1-of-2">
           <div className="composition">
-            {images.map(image => <Img fluid={image} />)}
+            {images.map((image, i) => <Img fluid={image} key={i} />)}
           </div>
         </div>
 

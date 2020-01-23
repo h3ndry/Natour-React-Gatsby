@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export function ButtonA({ href, text }) {
+export function ButtonA({ green, href, text }) {
+
   return (
-    <ButtonWrapperA href={href}>
+    <ButtonWrapperA green href={href}>
       {text}
     </ButtonWrapperA>
 
@@ -11,6 +12,7 @@ export function ButtonA({ href, text }) {
 }
 
 export function ButtonB({ href, text }) {
+
   return (
     <ButtonWrapperB href={href}>
       {text}
@@ -37,7 +39,7 @@ position: relative;
 font-size: .875rem;
 border: none;
 cursor: pointer;
-background-color: #fff;
+background-color: ${ true ? `#55c57a` : `#fff`};
 color: #777;
 animation: moveInBottom .5s ease-out .75s backwards;
 

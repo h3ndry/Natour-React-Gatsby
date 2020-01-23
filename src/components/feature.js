@@ -32,10 +32,11 @@ export default function feature() {
   return (
     <FeatureWrapper>
       <div className="row">
-        {featureContent.map(feature => <Card
+        {featureContent.map((feature, i) => <Card
           icon={feature.icon}
           title={feature.title}
           text={feature.text}
+          key={i}
         />)}
       </div>
     </FeatureWrapper>
