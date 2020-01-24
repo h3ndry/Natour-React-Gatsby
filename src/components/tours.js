@@ -82,6 +82,7 @@ const ToursWrapper = styled.section`
   background-color: #f7f7f7;
   padding: 15.5rem 0 9.37rem 0;
   margin-top: -6.25rem;
+  text-align: center;
 
   .title {
     text-align: center;
@@ -89,7 +90,9 @@ const ToursWrapper = styled.section`
   }
 
   .row {
-    height: 32.5rem
+    height: auto;
   }
+
+  
 
 `

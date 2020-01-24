@@ -27,7 +27,7 @@ export default function ToursCard({ img, title, list, price }) {
           <div className="card-cta">
             <div className="price-box">
               <p className="price-only">Only</p>
-              <p className="price-value">${price}</p>
+              <p className="price-value">$ {price}</p>
             </div>
             <ButtonA text='Book now!' />
           </div>
@@ -171,17 +171,13 @@ const ToursCardWrapper = styled.div`
       transform: rotateY(0);
     }
   }
-
-
   &:nth-of-type(2) {
     .overlay {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485) !important;
     }
-
     h4 span {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485)
     }
-
     .card-back {
      background-image: linear-gradient(to right bottom, #7ed56f, #28b485) !important;
     }
@@ -191,16 +187,51 @@ const ToursCardWrapper = styled.div`
     .overlay {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa) !important;
     }
-
     h4 span {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa)
     }
-
     .card-back {
      background-image: linear-gradient(to right bottom, #2998ff, #5643fa) !important;
     }
-
   }
 
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover: none) { 
+
+    .card {
+      background-color: #fff;
+      -webkit-box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+      box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+      &-side {
+        -webkit-box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.0);
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.0);
+      }
+
+      .card-back {
+        transform: rotateY(0);
+        position: relative;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        height: 14rem;
+
+        .card-cta {
+          /* position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 90%;
+          text-align: center; */
+
+          .price-box {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1rem;
+            .price-only { font-size: 1rem; text-transform: uppercase; }
+            .price-value { font-size: 2.25rem; font-weight: 100;}
+          }
+        }
+      }
+    }
+  }
   
 `

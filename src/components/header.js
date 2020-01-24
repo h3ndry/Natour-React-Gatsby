@@ -102,6 +102,17 @@ const HeaderWrapper = styled.header`
         letter-spacing: 1rem;
         animation: moveInRight 1s ease-out
       }
+
+      @media only screen and (max-width: 34em) {
+        .main {
+          font-size: 3rem;
+          letter-spacing: .8rem;
+        }
+        .sub {
+          font-size: 1rem;
+          letter-spacing: .5rem;
+        }
+      }
     }
   }
 `

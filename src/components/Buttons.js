@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export function ButtonA({ green, href, text }) {
 
   return (
-    <ButtonWrapperA green href={href}>
+    <ButtonWrapperA green={green} href={href}>
       {text}
     </ButtonWrapperA>
 
@@ -39,12 +39,12 @@ position: relative;
 font-size: .875rem;
 border: none;
 cursor: pointer;
-background-color: ${ true ? `#55c57a` : `#fff`};
-color: #777;
+background-color: ${ props => props.green ? `#55c57a` : `#fff`};
+color: ${ props => props.green ? `#fff` : `#777`};
 animation: moveInBottom .5s ease-out .75s backwards;
 
 &::after {
-  background-color: #fff;
+  background-color: ${ props => props.green ? `#55c57a` : `#fff`};
   content: "";
   display: inline-block;
   height: 100%;

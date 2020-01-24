@@ -39,9 +39,6 @@ export default function About() {
     data.nat3.childImageSharp.fluid
   ]
 
-  // return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-
-
   return (
     <AboutWrapper>
       <div className="title">
@@ -139,9 +136,17 @@ const AboutWrapper = styled.section`
           padding-bottom: 100% !important;
         }
 
+        @media only screen and (max-width: 28em) {
+          height: 8rem;
+        }
+
       }
       
     }
+  }
+
+  @media only screen and (max-width: 56em) {
+    padding-bottom: 30rem
   }
 
 `
