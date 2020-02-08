@@ -144,7 +144,7 @@ const StoriesWrapper = styled.section`
         transform: translate(-50%, -50%);
       }
 
-      figure imgb {
+      figure img {
         transform: translateX(-2.5rem) scale(1);
         filter: blur(3px) brightness(80%);
       }
@@ -153,6 +153,7 @@ const StoriesWrapper = styled.section`
     @media only screen and (max-width: 35em) {
       transform: skewX(0deg);
       padding: 2rem;
+      width: 100%;
       figure {transform: translateX(-1rem) skewX(0)}
       .story-text { transform: skewX(0)}
     }
